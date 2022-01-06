@@ -9,3 +9,4 @@ void Obj2d::draw()
 {
 	if (data) GL::DrawSprite(pos.x, pos.y, data);
 }
+//Ç®Ç›Ç≠Ç∂ã•ÇæÇ¡ÇΩÇÊí{ê∂
