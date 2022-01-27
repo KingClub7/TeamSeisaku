@@ -1,0 +1,5 @@
+0,select
+1,bom
+2,hitPlayer
+3,hitEnemy
+4,shot
