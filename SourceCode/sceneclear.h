@@ -1,9 +1,13 @@
 
 class SceneClear :public Scene
 {
-	int clear_timer;
+	int state;
+	int timer;
+	int animeno;
+	Sprite* clear;
 public:
 	void init();
 	void update();
 	void render();
+	void deinit();
 };

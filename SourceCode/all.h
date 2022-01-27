@@ -2,14 +2,15 @@
 #define ALL_H
 
 #include"../GameLib/game_lib.h"
-
-
-#include"gameover.h"
 #include"main.h"
-#include"OBJ2D.h"
 #include"scene.h"
-#include"sceneclear.h"
-#include"scenegame.h"
+#include"OBJ2D.h"
+#include"audio.h"
 #include"scenetitle.h"
+#include"scenerule.h"
+#include"scenegame.h"
+#include"gameover.h"
+#include"sceneclear.h"
+
 #endif // !ALL=H
 

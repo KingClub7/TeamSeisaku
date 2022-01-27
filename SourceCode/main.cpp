@@ -4,13 +4,14 @@ SceneGame scenegame;
 SceneTitle scenetitle;
 GameOver sceneover;
 SceneClear sceneclear;
-
+SceneRule scenerule;
 Scene* scene_label[] =
 {
 	&scenetitle,
 	&scenegame,
 	&sceneover,
-	&sceneclear
+	&sceneclear,
+	&scenerule
 };
 int nextSceneNo = -1;
 void setScene(int scene)
@@ -21,13 +22,17 @@ void setScene(int scene)
 }
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-	GameLib::init(L"ƒQ[ƒ€ƒvƒƒOƒ‰ƒ~ƒ“ƒO‡T", 1280, 720);
+	GameLib::init(L"No.1332 presentB", 1280, 720);
+	audio_init();
 	setScene(SCENE_TITLE);
 	while (GameLib::gameLoop())
 	{
+		
+		music::update();
 		GameLib::input::update();
 		
 		
+
 		if (nextSceneNo != -1)
 		{
 			pScene = scene_label[nextSceneNo];
@@ -40,7 +45,9 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 		GameLib::present(1, 0);
 
 	}
-	GameLib::uninit();
 
+	GameLib::uninit();
+	
+	pScene->deinit();
 	return 0;
 }

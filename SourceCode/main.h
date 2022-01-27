@@ -5,7 +5,7 @@ enum SceneLabel
 	SCENE_GAME,
 	SCENE_OVER,
 	SCENE_CLEAR,
-
+	SCENE_RULE,
 
 
 	SCENE_MAX

@@ -9,6 +9,8 @@ public:
 	VECTOR2 texprivot;//Šî€êy
 	VECTOR2 HW;//’·úª
 	Sprite* spr;
+	float alpha;
+	int effectTimer;
 	int state;
 	int animeno;
 	int jumpcount;

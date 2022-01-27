@@ -14,9 +14,15 @@ OBJ2D::OBJ2D()
 	size = { 1,1 };
 	spr = nullptr;
 	animeno = 0;
+	alpha = 1;
+	effectTimer = 60;
 }
 void OBJ2D::bomb_init(OBJ2D* obj)
 {
+	obj->spr = sprite_load(L"./Data/Images/countBom2.png");
+	obj->animeno = 0;
+	obj->timer = 0;
+	obj->state = 0;
 	obj->pos = { static_cast<float>(rand()%1081+100),720 - 40 };
 	obj->texpos = { 80,0 };
 	obj->texHW = { 80,80 };

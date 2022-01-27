@@ -1,10 +1,11 @@
 #pragma once
 #include"scene.h"
-class SceneTitle :public Scene
+class SceneRule :public Scene
 {
+	int state;
 public:
-	
-	void init();
+
+	void init() { state = 0; }
 	void update();
 	void render();
 	void deinit();
